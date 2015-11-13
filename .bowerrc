@@ -1,0 +1,6 @@
+{
+  "analytics": false,
+  "directory": "_global-resources/vendor",
+  "interactive": false,
+  "json": "bower.json"
+}
