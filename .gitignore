@@ -1,15 +1,3 @@
-*.sublime-*
-.idea
-.sass-cache
-/_share
 /build
-/coverage
-/selenium
-/source/ecm/_global-resources/vendor
-errors.log
-nginx.conf
 node_modules
-test-results-*.xml
-bower_components/
 release
-nbproject
