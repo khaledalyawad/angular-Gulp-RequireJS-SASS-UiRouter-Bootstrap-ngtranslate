@@ -7,25 +7,23 @@ define({
   baseUrl: '',               //paths relative to `source` folder
 
   paths: {
-    'angular'                 : 'new_project_name/_global-resources/vendor/angular/angular',
-    'angular-mocks'           : 'new_project_name/_global-resources/vendor/angular-mocks/angular-mocks',
-    'angular-breadcrumb'      : 'new_project_name/_global-resources/vendor/angular-breadcrumb/release/angular-breadcrumb',
-    'angularjs-toaster'       : 'new_project_name/_global-resources/vendor/angularjs-toaster/toaster',
-    'ngResource'              : 'new_project_name/_global-resources/vendor/angular-resource/angular-resource',
-    'ui.router'               : 'new_project_name/_global-resources/vendor/angular-ui-router/release/angular-ui-router',
-    'ui.bootstrap'            : 'new_project_name/_global-resources/vendor/angular-bootstrap/ui-bootstrap.min',
-    'ui.bootstrap-tpls'       : 'new_project_name/_global-resources/vendor/angular-bootstrap/ui-bootstrap-tpls.min',
-    'angular-animate'         : 'new_project_name/_global-resources/vendor/angular-animate/angular-animate',
+    'angular'                 : 'projectX/_global-resources/vendor/angular/angular',
+    'angular-mocks'           : 'projectX/_global-resources/vendor/angular-mocks/angular-mocks',
+    'angular-breadcrumb'      : 'projectX/_global-resources/vendor/angular-breadcrumb/release/angular-breadcrumb',
+    'angularjs-toaster'       : 'projectX/_global-resources/vendor/angularjs-toaster/toaster',
+    'ui.router'               : 'projectX/_global-resources/vendor/angular-ui-router/release/angular-ui-router',
+    'ui.bootstrap'            : 'projectX/_global-resources/vendor/angular-bootstrap/ui-bootstrap.min',
+    'ui.bootstrap-tpls'       : 'projectX/_global-resources/vendor/angular-bootstrap/ui-bootstrap-tpls.min',
+    'angular-animate'         : 'projectX/_global-resources/vendor/angular-animate/angular-animate',
 
-    'angular-translate'       : 'new_project_name/_global-resources/vendor/angular-translate/angular-translate',
-    'angular-translate-loader': 'new_project_name/_global-resources/vendor/angular-translate-loader-static-files/angular-translate-loader-static-files',
-    'angular-dynamic-locale'  : 'new_project_name/_global-resources/vendor/angular-dynamic-locale/dist/tmhDynamicLocale',
+    'angular-translate'       : 'projectX/_global-resources/vendor/angular-translate/angular-translate',
+    'angular-translate-loader': 'projectX/_global-resources/vendor/angular-translate-loader-static-files/angular-translate-loader-static-files',
+    'angular-dynamic-locale'  : 'projectX/_global-resources/vendor/angular-dynamic-locale/dist/tmhDynamicLocale',
 
 
-    'async'                   : 'new_project_name/_global-resources/vendor/requirejs-plugins/src/async',
-    'jquery'                  : 'new_project_name/_global-resources/vendor/jquery/dist/jquery',
-    'jquery-ui'               : 'new_project_name/_global-resources/vendor/jquery-ui/jquery-ui.min',
-    'lodash'                  : 'new_project_name/_global-resources/vendor/lodash/lodash',
+    'async'                   : 'projectX/_global-resources/vendor/requirejs-plugins/src/async',
+    'jquery'                  : 'projectX/_global-resources/vendor/jquery/dist/jquery',
+    'underscore'              : 'projectX/_global-resources/vendor/underscore/underscore',
 
 
 
@@ -39,7 +37,6 @@ define({
       'deps': ['jquery'],
       'exports': 'angular'
     },
-    'ngResource': ['angular'],
     'ui.router' : ['angular'],
     'angular-mocks': ['angular'],
     'angular-translate': ['angular'],

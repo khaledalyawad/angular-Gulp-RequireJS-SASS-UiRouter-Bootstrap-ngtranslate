@@ -1,3 +1,5 @@
 /build
+/source/*/_global-resources/vendor
 node_modules
 release
+.DS_Store

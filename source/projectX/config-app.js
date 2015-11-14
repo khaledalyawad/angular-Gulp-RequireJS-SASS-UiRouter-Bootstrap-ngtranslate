@@ -3,8 +3,8 @@
  */
 define([
   './app',
-  'api-call',
-  'api-interceptor',
+  // 'api-call',
+  // 'api-interceptor',
   'angular-breadcrumb'
 ], function (app) {
   'use strict';
