@@ -39,7 +39,50 @@ define([
 
 
         var allStates = [
-
+          // Public pages
+          {
+            name:'main-wrapper',
+            abstract: true,
+            templateUrl: '_main-wrapper/main-wrapper.html'//,
+            // resolve: {
+            //   loadDependencies: ["$q", function($q) {
+            //     var deferred = $q.defer();
+            //     require(['_main-wrapper/main-wrapper-Ctrl'], function() { deferred.resolve(); });
+            //     return deferred.promise;
+            //   }],
+            //   authorize: ['authorization',
+            //     function (authorization) {
+            //       return authorization.authorize();
+            //     }
+            //   ]
+            // }
+          },
+          {
+            name:'sample-state',
+            parent: 'main-wrapper',
+            url: '/sample-state',
+            templateUrl: 'sample-state/view.html'//,
+            // resolve: {
+            //   loadDependencies: ["$q", function($q) {
+            //     var deferred = $q.defer();
+            //     require(['login/login-Ctrl'], function() { deferred.resolve(); });
+            //     return deferred.promise;
+            //   }]
+            // }
+          },
+          {
+            name:'sample-state0',
+            parent: 'main-wrapper',
+            url: '/sample-state0',
+            templateUrl: 'sample-state0/view.html'//,
+            // resolve: {
+            //   loadDependencies: ["$q", function($q) {
+            //     var deferred = $q.defer();
+            //     require(['login/login-Ctrl'], function() { deferred.resolve(); });
+            //     return deferred.promise;
+            //   }]
+            // }
+          }
         ]
 
 
@@ -48,7 +91,7 @@ define([
           app.$stateProvider.state(allStates[i]);
         }
 
-        urlRouterProvider.otherwise('/state');
+        urlRouterProvider.otherwise('/sample-state');
 
       }
     ]
