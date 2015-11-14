@@ -7,7 +7,7 @@ module.exports =  function(params) {
       return es.concat(
         // copy template files
         gulp.src(['source/'+config.proj+'/**/*.html' , '!source/'+config.proj+'/_global-resources/vendor/**/*.html'])
-          .pipe(gulp.dest(config.buildTarget + '/'+config.proj)),
+          .pipe(gulp.dest(config.buildTarget + '/'+config.proj))
       )
   }
 }

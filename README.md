@@ -23,7 +23,7 @@ This is an angular, gulp, requirejs, sass, ui-router, toaster, translate, browse
     'async'                   
     'jquery'                  
     'jquery-ui'             
-    'lodash'                  
+    'undescore'                  
     'api-call'                
     'api-interceptor'         
 

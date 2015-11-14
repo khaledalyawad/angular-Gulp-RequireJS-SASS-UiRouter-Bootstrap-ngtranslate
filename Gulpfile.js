@@ -1,8 +1,6 @@
 var gulp = require('gulp');
 var prompt = require('gulp-prompt');
-var replace = require('gulp-replace');
 var browserSync = require('browser-sync');
-var rename = require('gulp-rename');
 
 var taskConfigObj ={};
 var projectname = '';
@@ -11,6 +9,8 @@ var mainstateName = '';
 var mainControllerName = '';
 var statesCount = '';
 var statesName = '';
+
+projectname = 'projectX'
 
 
 var handleError =  function (err) {
@@ -106,7 +106,6 @@ gulp.task('serve', ['requireJsTask' , 'copyAssets' , 'sass', 'copyjsDev', 'copyj
   gulp.task('releaseStart', ['copyAssets' , 'sass', 'requireJsTask', 'copyjsDev', 'copyjsVendor', 'copyHtml','copyJson'], function () {
     //releasing here
   });
-
 
 
 gulp.task('run-project', function () {
