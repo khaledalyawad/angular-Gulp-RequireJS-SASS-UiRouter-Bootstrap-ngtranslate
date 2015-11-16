@@ -1,6 +1,3 @@
-/**
- * Defines states, constants for application
- */
 define([
   './app'
 ], function (app) {

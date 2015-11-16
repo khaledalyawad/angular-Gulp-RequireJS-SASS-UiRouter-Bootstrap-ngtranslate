@@ -1,0 +1,84 @@
+
+/* variables.scss */
+
+/*standard color */
+$grayish-magenta: #cda6c5;
+$dark-magenta: #b06aa2;
+$moderate-magenta: #953882;
+$dark-pink: #895771;
+$white-grey: #f5f5f5;
+$border-grey: #f2f2f2;
+$soft-grey: #eff0f0;
+$light-grey: #ebebeb;
+$grayish-cyan: #d0d1d1;
+$grey: #adadad;
+$dark-grey: #5c5c5c;
+$dark-cyan: #66a19f;
+$yellow: #fef1cc;
+$soft-yellow: #fde499;
+$bg-yellow: #fdea8f;
+$warm-yellow: #fbe398;
+$secondary-yellow: #feeb90;
+$moderate-yellow: #b9d035;
+$dark-yellow: #858f63;
+$grayish-orange: #fdf4da;
+$vivid-orange: #f68a20;
+$secondary-orange: #ee8a21;
+$soft-blue: #b9e4f5;
+$pale-blue: #f7fcff;
+$strong-blue: #0066b3;
+$desaturated-dark-blue: #7086a4;
+$green: #a1c845;
+$moderate-green: #89ba3f;
+$lime-green: #87b879;
+$soft-red: #e94e47;
+
+
+/*color used in ECM*/
+$white-color: #fff;
+$black-color: #000;
+$dark-blue-color: #002561;
+$lime-green-color: #009046;
+$soft-cyan-color: #9cdaec;
+$vivid-cyan-color: #02cee4;
+$baby-blue: #00A9D4;
+$yellow-time-date: #fdcb9a;
+$pure-pink-color: #db0050;
+$dark-cyan: #186f86;
+$medium-dark-cyan: #2199b7;
+
+
+$phone-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 992px;
+$wide-desktop-width: 1200px;
+
+@mixin phone {
+  @media (max-width: #{$phone-width -1px}) {
+    @content;
+  }
+}
+
+@mixin phablet {
+  @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) and (max-width: #{$wide-desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin wideDesktop {
+  @media (min-width: #{$wide-desktop-width}) {
+    @content;
+  }
+}

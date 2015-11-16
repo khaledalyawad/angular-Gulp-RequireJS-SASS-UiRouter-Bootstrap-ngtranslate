@@ -1,6 +1,3 @@
-/**
- * Defines states, constants for application
- */
 define([
   './app',
   'api-call',
@@ -47,7 +44,6 @@ define([
         //BREADCRUMBS
         //breadcrumbProvider.setOptions({ name: CONFIG.breadcrumbs.prefix});
 
-
         //HTTP INTERCEPTOR
         httpProvider.defaults.headers.patch = {'Content-Type': 'application/json;charset=utf-8'};
         httpProvider.interceptors.push('apiInterceptor');
@@ -58,9 +54,6 @@ define([
           .preferredLanguage(CONFIG.resources.i18n.preferred);
         tmhDynamicLocaleProvider
           .localeLocationPattern(CONFIG.resources.locale.pattern);
-
-
-
 
       }
     ]
