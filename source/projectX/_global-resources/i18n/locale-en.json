@@ -50,8 +50,10 @@
     "previous": "Previous",
 
   },
-  "sample-state" : { "some-nedd-to-be-translated": "translated"
+  "sample-state" : {
+    "some-nedd-to-be-translated": "translated"
   },
-  "sample-state0" : { "some-nedd-to-be-translated": "translated"
+  "sample-state0" : {
+    "some-nedd-to-be-translated": "translated"
   }
 }

@@ -48,10 +48,10 @@ define([
         httpProvider.interceptors.push('apiInterceptor');
 
         //LOCALIZATIONS/TRANSLATIONS
-        // translateProvider
-        //   .useStaticFilesLoader({ prefix: CONFIG.resources.i18n.prefix, suffix: CONFIG.resources.i18n.suffix })
-        //   .preferredLanguage(CONFIG.resources.i18n.preferred);
-        // tmhDynamicLocaleProvider.localeLocationPattern(CONFIG.resources.locale.pattern);
+        translateProvider
+          .useStaticFilesLoader({ prefix: CONFIG.resources.i18n.prefix, suffix: CONFIG.resources.i18n.suffix })
+          .preferredLanguage(CONFIG.resources.i18n.preferred);
+        tmhDynamicLocaleProvider.localeLocationPattern(CONFIG.resources.locale.pattern);
 
 
         var allStates = [
