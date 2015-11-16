@@ -5,7 +5,8 @@
 define([
   'angular',
   './app',
-  './config-app'
+  './config-app',
+  './router'
 ], function (angular) {
   'use strict';
   // You can place operations that need to initialize prior to app start here
