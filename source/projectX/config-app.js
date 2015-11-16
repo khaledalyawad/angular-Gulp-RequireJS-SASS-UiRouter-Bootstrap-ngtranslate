@@ -43,45 +43,48 @@ define([
           {
             name:'main-wrapper',
             abstract: true,
-            templateUrl: '_main-wrapper/main-wrapper.html'//,
-            // resolve: {
-            //   loadDependencies: ["$q", function($q) {
-            //     var deferred = $q.defer();
-            //     require(['_main-wrapper/main-wrapper-Ctrl'], function() { deferred.resolve(); });
-            //     return deferred.promise;
-            //   }],
+            templateUrl: '_main-wrapper/main-wrapper.html',
+            resolve: {
+              loadDependencies: ["$q", function($q) {
+                var deferred = $q.defer();
+                require(['_main-wrapper/main-wrapper-Ctrl'], function() { deferred.resolve(); });
+                return deferred.promise;
+              }]
             //   authorize: ['authorization',
             //     function (authorization) {
             //       return authorization.authorize();
             //     }
             //   ]
-            //}
+            }
           },
           {
-            name:'sample-state',
+            name:'sample-state-1',
             parent: 'main-wrapper',
-            url: '/sample-state',
-            templateUrl: 'sample-state/view.html'//,
-            // resolve: {
-            //   loadDependencies: ["$q", function($q) {
-            //     var deferred = $q.defer();
-            //     require(['login/login-Ctrl'], function() { deferred.resolve(); });
-            //     return deferred.promise;
-            //   }]
-            // }
+            url: '/sample-state-1',
+            templateUrl: 'sample-state-1/view.html',
+            resolve: {
+              loadDependencies: ["$q", function($q) {
+                var deferred = $q.defer();
+                require(['sample-state-1/controller'], function() { deferred.resolve(); });
+                return deferred.promise;
+              }]
+            },
+            controller : 'sample-state-1-Ctrl'
           },
           {
-            name:'sample-state0',
+            name:'sample-state-2',
             parent: 'main-wrapper',
-            url: '/sample-state0',
-            templateUrl: 'sample-state0/view.html'//,
-            // resolve: {
-            //   loadDependencies: ["$q", function($q) {
-            //     var deferred = $q.defer();
-            //     require(['login/login-Ctrl'], function() { deferred.resolve(); });
-            //     return deferred.promise;
-            //   }]
-            // }
+            url: '/sample-state-2',
+            templateUrl: 'sample-state-2/view.html',
+            resolve: {
+              loadDependencies: ["$q", function($q) {
+                var deferred = $q.defer();
+                require(['sample-state-2/controller'], function() { deferred.resolve(); });
+                return deferred.promise;
+              }]
+            },
+            controller : 'sample-state-2-Ctrl'
+
           }
         ]
 
@@ -91,7 +94,7 @@ define([
           app.$stateProvider.state(allStates[i]);
         }
 
-        urlRouterProvider.otherwise('/sample-state');
+        urlRouterProvider.otherwise('/sample-state-1');
 
       }
     ]

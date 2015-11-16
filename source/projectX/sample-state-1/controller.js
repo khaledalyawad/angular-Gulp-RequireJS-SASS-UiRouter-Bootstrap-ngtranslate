@@ -1,15 +1,15 @@
 'use strict';
 
-define(['new_project_name/app'
-], function(app, _) {
-  return app.$controllerProvider.register('controller', [
+define(['projectX/app'
+], function(app) {
+  return app.$controllerProvider.register('sample-state-1-Ctrl', [
     '$scope',
     '$translate',
     '$state',
     function($scope, $translate,$state) {
       $scope.state1 = "you are in state 1";
       $scope.goToState = function(){
-        $state.go("state2");
+        $state.go("sample-state-2");
       };
     }
   ]);
