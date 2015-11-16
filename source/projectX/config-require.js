@@ -7,6 +7,7 @@ define({
   baseUrl: '',               //paths relative to `source` folder
 
   paths: {
+    'app'                     : 'projectX/app',
     'angular'                 : 'projectX/_global-resources/vendor/angular/angular',
     'angular-mocks'           : 'projectX/_global-resources/vendor/angular-mocks/angular-mocks',
     'angular-breadcrumb'      : 'projectX/_global-resources/vendor/angular-breadcrumb/release/angular-breadcrumb',
@@ -28,8 +29,8 @@ define({
 
 
     /* call Services */
-    'api-call'                : 'plugin-modules/api-services/api-call.r',
-    'api-interceptor'         : 'plugin-modules/api-services/api-interceptor.r',
+    'api-call'                : 'projectX/_global-resources//api-services/api-call.r',
+    'api-interceptor'         : 'projectX/_global-resources//api-services/api-interceptor.r'
   },
 
   shim: {
