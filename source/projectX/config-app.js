@@ -55,7 +55,7 @@ define([
             //       return authorization.authorize();
             //     }
             //   ]
-            // }
+            //}
           },
           {
             name:'sample-state',

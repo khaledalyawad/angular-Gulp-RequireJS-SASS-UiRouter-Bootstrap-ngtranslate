@@ -7,7 +7,6 @@ define({
   baseUrl: '',               //paths relative to `source` folder
 
   paths: {
-    'app'                     : 'projectX/app',
     'angular'                 : 'projectX/_global-resources/vendor/angular/angular',
     'angular-mocks'           : 'projectX/_global-resources/vendor/angular-mocks/angular-mocks',
     'angular-breadcrumb'      : 'projectX/_global-resources/vendor/angular-breadcrumb/release/angular-breadcrumb',
