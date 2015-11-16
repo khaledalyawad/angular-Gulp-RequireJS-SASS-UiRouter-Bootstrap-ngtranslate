@@ -9,49 +9,7 @@
     "SERVER_REPSOND": "fr ... Server is not responding",
     "UNABLE_API": "fr ... Unable to get API Response"
   },
-  "common":{
-    "save":"fr ... save",
-    "id":"fr ... ID",
-    "upload":"fr ... upload",
-    "browse":"fr ... browse",
-    "search" : "fr ... Search",
-    "ok":"fr ... ok",
-    "cancel":"fr ... cancel",
-    "add":"fr ... add",
-    "remove":"fr ... remove",
-    "clear" : "fr ... Clear",
-    "cardinality": "fr ... cardinality",
-    "contains": "fr ... Contains",
-    "requires": "fr ... Requires",
-    "optional": "fr ... Optional",
-    "upload-attachment":"fr ... upload attachment",
-    "attachments":"fr ... attachments",
-    "select-from-list":"fr ... Select from list",
-    "details":"fr ... details",
-    "submit":"fr ... submit",
-    "high":"fr ... high",
-    "low":"fr ... low",
-    "yes" : "fr ... Yes",
-    "no": "fr ... No",
-    "null" : "fr ... Null",
-    "priority":"fr ... Priority",
-    "na" : "fr ... n/a",
-    "continue": "fr ... Continue",
-    "show-all" : "fr ... Show All",
-    "show-less" : "fr ... Show Less",
-    "view" : "fr ... View",
-    "select-category" : "fr ... Select Category",
-    "new" : "fr ... New",
-    "add-new" : "fr ... Add New",
-    "existing" : "fr ... Existing",
-    "name" : "fr ... Name",
-    "category":"fr ... category",
-    "next": "fr ... Next",
-    "previous": "fr ... Previous",
-
-  },
-  "sample-state" : { "some-nedd-to-be-translated": "fr ... translated"
-  },
-  "sample-state0" : { "some-nedd-to-be-translated": "fr ... translated"
+  "common": {
+    "sample": "fr ... this text is translated!"
   }
 }

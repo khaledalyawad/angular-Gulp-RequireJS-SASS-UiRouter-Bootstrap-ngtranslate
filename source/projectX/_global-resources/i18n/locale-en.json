@@ -9,51 +9,7 @@
     "SERVER_REPSOND": "Server is not responding",
     "UNABLE_API": "Unable to get API Response"
   },
-  "common":{
-    "save":"save",
-    "id":"ID",
-    "upload":"upload",
-    "browse":"browse",
-    "search" : "Search",
-    "ok":"ok",
-    "cancel":"cancel",
-    "add":"add",
-    "remove":"remove",
-    "clear" : "Clear",
-    "cardinality": "cardinality",
-    "contains": "Contains",
-    "requires": "Requires",
-    "optional": "Optional",
-    "upload-attachment":"upload attachment",
-    "attachments":"attachments",
-    "select-from-list":"Select from list",
-    "details":"details",
-    "submit":"submit",
-    "high":"high",
-    "low":"low",
-    "yes" : "Yes",
-    "no": "No",
-    "null" : "Null",
-    "priority":"Priority",
-    "na" : "n/a",
-    "continue": "Continue",
-    "show-all" : "Show All",
-    "show-less" : "Show Less",
-    "view" : "View",
-    "select-category" : "Select Category",
-    "new" : "New",
-    "add-new" : "Add New",
-    "existing" : "Existing",
-    "name" : "Name",
-    "category":"category",
-    "next": "Next",
-    "previous": "Previous",
-
-  },
-  "sample-state" : {
-    "some-nedd-to-be-translated": "translated"
-  },
-  "sample-state0" : {
-    "some-nedd-to-be-translated": "translated"
+  "common": {
+    "sample": "this text is translated!"
   }
 }

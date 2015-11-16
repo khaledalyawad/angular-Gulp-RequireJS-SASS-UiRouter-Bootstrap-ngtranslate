@@ -41,7 +41,7 @@ define([
 
 
         //BREADCRUMBS
-        breadcrumbProvider.setOptions({ prefixStateName: CONFIG.breadcrumbs.prefix, templateUrl: CONFIG.breadcrumbs.template });
+        // breadcrumbProvider.setOptions({ prefixStateName: CONFIG.breadcrumbs.prefix, templateUrl: CONFIG.breadcrumbs.template });
 
         //HTTP INTERCEPTOR
         httpProvider.defaults.headers.patch = {'Content-Type': 'application/json;charset=utf-8'};
