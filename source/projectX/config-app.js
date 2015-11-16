@@ -8,14 +8,30 @@ define([
   'angular-breadcrumb'
 ], function (app) {
   'use strict';
-  app.constant('CONFIG', 'your-app-config-here');
+  app.constant('CONFIG', {
+    breadcrumbs: {
+      template: '/_global-resources/breadcrumbs/breadcrumbs.html',
+      prefix: 'root'
+    },
+    resources: {
+      i18n: {
+        prefix: '/_global-resources/i18n/locale-',
+        suffix: '.json',
+        preferred: 'en'
+      },
+      locale: {
+      	pattern: '/vendor/angular-i18n/angular-locale_{{locale}}.js',
+      	preferred: 'en-us'
+      }
+    }
+  });
   app.config(
     [ '$stateProvider', '$controllerProvider', '$urlRouterProvider',
       '$httpProvider', '$provide', '$compileProvider', '$filterProvider', '$breadcrumbProvider',
-      '$translateProvider', 'tmhDynamicLocaleProvider',
+      '$translateProvider', 'tmhDynamicLocaleProvider', 'CONFIG',
       function (stateProvider, controllerProvider, urlRouterProvider,
                 httpProvider, provide, compileProvider, filterProvider, breadcrumbProvider,
-                translateProvider, tmhDynamicLocaleProvider) {
+                translateProvider, tmhDynamicLocaleProvider, CONFIG) {
         //LAZY LOAD
         app.$stateProvider = stateProvider;
         app.$controllerProvider = controllerProvider;
@@ -25,7 +41,7 @@ define([
 
 
         //BREADCRUMBS
-      //  breadcrumbProvider.setOptions({ prefixStateName: CONFIG.breadcrumbs.prefix, templateUrl: CONFIG.breadcrumbs.template });
+        breadcrumbProvider.setOptions({ prefixStateName: CONFIG.breadcrumbs.prefix, templateUrl: CONFIG.breadcrumbs.template });
 
         //HTTP INTERCEPTOR
         httpProvider.defaults.headers.patch = {'Content-Type': 'application/json;charset=utf-8'};
@@ -62,6 +78,9 @@ define([
             parent: 'main-wrapper',
             url: '/sample-state-1',
             templateUrl: 'sample-state-1/view.html',
+            ncyBreadcrumb: {
+              label: "breadcrumb 1"
+            },
             resolve: {
               loadDependencies: ["$q", function($q) {
                 var deferred = $q.defer();
@@ -76,6 +95,9 @@ define([
             parent: 'main-wrapper',
             url: '/sample-state-2',
             templateUrl: 'sample-state-2/view.html',
+            ncyBreadcrumb: {
+              label: "breadcrumb 1"
+            },
             resolve: {
               loadDependencies: ["$q", function($q) {
                 var deferred = $q.defer();
@@ -101,8 +123,8 @@ define([
   );
 
   app.run([
-  	'$rootScope', '$state', '$stateParams', 'tmhDynamicLocale',
-  	function ($rootScope, $state, $stateParams, tmhDynamicLocale) {
+  	'$rootScope', '$state', '$stateParams', 'tmhDynamicLocale','CONFIG',
+  	function ($rootScope, $state, $stateParams, tmhDynamicLocale,CONFIG) {
 
     //STATE CHANGE
     $rootScope.$on('$stateChangeStart', function (event, toState, toStateParams) {
@@ -123,7 +145,7 @@ define([
 //      document.getElementsByTagName('html')[0].setAttribute('lang', data.language);
 //      tmhDynamicLocale.set(data.language.toLowerCase().replace(/_/g, '-'));
     });
-    //tmhDynamicLocale.set(CONFIG.resources.locale.preferred);
+    tmhDynamicLocale.set(CONFIG.resources.locale.preferred);
 
     }
   ]);
