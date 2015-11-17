@@ -1,3 +1,5 @@
+'use strict';
+
 if (typeof define !== 'function') {
   // to be able to require file from node
   var define = require('amdefine')(module);
