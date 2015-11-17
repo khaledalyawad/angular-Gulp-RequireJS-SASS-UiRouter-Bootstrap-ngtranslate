@@ -2,7 +2,9 @@ define([
   './app',
   'api-call',
   'api-interceptor',
-  'angular-breadcrumb'
+  'angular-breadcrumb',
+  'authorization',
+  'principal-service'
 ], function (app) {
 
   'use strict';

@@ -17,12 +17,12 @@ define([
                 var deferred = $q.defer();
                 require(['_main-wrapper/main-wrapper-Ctrl'], function() { deferred.resolve(); });
                 return deferred.promise;
-              }]
-            //   authorize: ['authorization',
-            //     function (authorization) {
-            //       return authorization.authorize();
-            //     }
-            //   ]
+              }],
+              authorize: ['authorization',
+                function (authorization) {
+                  return authorization.authorize();
+                }
+              ]
             },
             controller : 'main-wrapper-Ctrl'
           },
@@ -41,7 +41,11 @@ define([
                 return deferred.promise;
               }]
             },
-            controller : 'sample-state-1-Ctrl'
+            controller : 'sample-state-1-Ctrl',
+            data: {
+             roles: [],
+             title: 'access-denied.title'
+            }
           },
           {
             name:'sample-state-2',
@@ -58,7 +62,11 @@ define([
                 return deferred.promise;
               }]
             },
-            controller : 'sample-state-2-Ctrl'
+            controller : 'sample-state-2-Ctrl',
+            data: {
+             roles: [],
+             title: 'access-denied.title'
+            }
 
           }
         ]
