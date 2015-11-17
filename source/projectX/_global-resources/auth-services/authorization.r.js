@@ -16,7 +16,7 @@ define(['projectX/app'], function(app) {
                 authorize: function() {
                     return principal.identity().then(function() {
                         var isAuthenticated = principal.isAuthenticated();
-                        console.log($rootScope.toState);
+
                         if ($rootScope.toState.data.roles && $rootScope.toState.data.roles.length > 0 && !principal.isInAnyRole($rootScope.toState.data.roles)) {
                             if (isAuthenticated) {
                               $state.go('access-denied'); // user is signed in but not authorized for desired state

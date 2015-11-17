@@ -7,7 +7,8 @@ define(['projectX/app'
     '$translate',
     '$state',
     'apiCall',
-    function($scope, $translate,$state,apiCall) {
+    'toaster',
+    function($scope, $translate,$state,apiCall,toaster) {
       $scope.state1 = "you are in state 2";
       $scope.goToState = function(){
         $state.go("sample-state-1");
@@ -16,9 +17,11 @@ define(['projectX/app'
       apiCall.call(options).then(
         function(data){
           console.log(data);
-        },
-        function(data){
-          console.log(data);
+          toaster.pop({
+              type: 'info',
+              title: data.status,
+              body: data.statusText
+            });
         }
       )
     }

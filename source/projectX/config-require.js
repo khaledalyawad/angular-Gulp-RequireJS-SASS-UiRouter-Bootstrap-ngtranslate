@@ -30,8 +30,8 @@ define({
     /* call Services */
     'api-call'                : 'projectX/_global-resources/api-services/api-call.r',
     'api-interceptor'         : 'projectX/_global-resources/api-services/api-interceptor.r',
-    'authorization'           : 'projectX/_global-resources/api-services/authorization.r',
-    'principal-service'       : 'projectX/_global-resources/api-services/principal.r'
+    'authorization'           : 'projectX/_global-resources/auth-services/authorization.r',
+    'principal-service'       : 'projectX/_global-resources/auth-services/principal.r'
   },
 
   shim: {
