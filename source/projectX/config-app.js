@@ -33,8 +33,8 @@ define([
       '$httpProvider', '$provide', '$compileProvider', '$filterProvider', '$breadcrumbProvider',
       '$translateProvider', 'tmhDynamicLocaleProvider', 'CONFIG',
       function (stateProvider, controllerProvider,
-                httpProvider, provide, compileProvider, filterProvider, breadcrumbProvider,
-                translateProvider, tmhDynamicLocaleProvider, CONFIG) {
+                $httpProvider, provide, compileProvider, filterProvider, breadcrumbProvider,
+                $translateProvider, tmhDynamicLocaleProvider, CONFIG) {
         //LAZY LOAD
         app.$stateProvider = stateProvider;
         app.$controllerProvider = controllerProvider;
@@ -47,15 +47,16 @@ define([
         //breadcrumbProvider.setOptions({ name: CONFIG.breadcrumbs.prefix});
 
         //HTTP INTERCEPTOR
-        httpProvider.defaults.headers.patch = {'Content-Type': 'application/json;charset=utf-8'};
-        httpProvider.interceptors.push('apiInterceptor');
+        $httpProvider.defaults.headers.patch = {'Content-Type': 'application/json;charset=utf-8'};
+        $httpProvider.interceptors.push('apiInterceptor');
 
         //LOCALIZATIONS/TRANSLATIONS
-        translateProvider
+        $translateProvider
           .useStaticFilesLoader({ prefix: CONFIG.resources.i18n.prefix, suffix: CONFIG.resources.i18n.suffix })
           .preferredLanguage(CONFIG.resources.i18n.preferred);
         tmhDynamicLocaleProvider
           .localeLocationPattern(CONFIG.resources.locale.pattern);
+        $translateProvider.useSanitizeValueStrategy('escape');
 
       }
     ]
