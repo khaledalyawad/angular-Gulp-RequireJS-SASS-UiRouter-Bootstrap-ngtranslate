@@ -7,7 +7,7 @@ module.exports =  function(params) {
   return function () {
         browserSync({
           open: gutil.env.open === 'true',
-          port: 9955,
+          port: 9999,
           server: {
             baseDir: config.buildTarget+'/'+config.proj
           }
